@@ -1,6 +1,6 @@
 # Devcamp Web Application 
 
-> This is a Ruby on Rails 5 application that allows users to create their own portfolios. 
+> This is a Ruby on Rails 5 application that allows users to create their own portfolios. It is designed as a review to Rails and is made using only Rails Views. 
 
 ### Features 
 - Real time chat engine for comments
@@ -8,9 +8,3 @@
 - Portfolio 
 - Drag and drop interface 
 
-### Code Example 
-```ruby
-def my_great_method
-  puts "Here it is" 
-  end 
-  ```
