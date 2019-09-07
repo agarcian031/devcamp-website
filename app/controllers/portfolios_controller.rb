@@ -2,7 +2,11 @@ class PortfoliosController < ApplicationController
   before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
 
   def index 
-    @portfolio_items = Portfolio.all
+    @portfolio_items = Portfolio.all  
+  end 
+
+  def angular 
+    @angular_portfolio_items = Portfolio.angular 
   end 
 
   def show 
@@ -10,7 +14,9 @@ class PortfoliosController < ApplicationController
  
 
   def new 
-    @portfolio_item = Portfolio.new 
+    @portfolio_item = Portfolio.new
+    # build will instantiate 3 versions for portfolio item with technologies 
+    3.times { @portfolio_item.technologies.build}
   end 
 
   def create
@@ -54,7 +60,7 @@ end
 
   private 
   def portfolio_params 
-    params.require(:portfolio).permit(:title, :subtitle, :body)
+    params.require(:portfolio).permit(:title, :subtitle, :body, technologies_attributes: [:name])
   end 
 
   def set_portfolio
