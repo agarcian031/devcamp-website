@@ -19,6 +19,9 @@ Bundler.require(*Rails.groups)
 
 module DevcampPortfolio
   class Application < Rails::Application
+    # strong params - this is if you want the computer to accept all parameters from the client side. You would set this to true and then take off .permit[:prams] from controller param_methods
+    # config.action_controller.permit_all_parameters = true 
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
