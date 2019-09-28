@@ -1,6 +1,7 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
   # calls the method set_blog only for show, edit, update, and destroy. 
+  layout "blog"
 
   # GET /blogs
   # GET /blogs.json
