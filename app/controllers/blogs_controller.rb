@@ -14,7 +14,7 @@ class BlogsController < ApplicationController
   def show
     # @blog = Blog.find(params[:id])
     @page_title = @blog.title 
-    @seo_keywords = @blog.body 
+    # @seo_keywords = @blog.body 
 
   end
 
